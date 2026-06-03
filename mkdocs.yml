@@ -81,6 +81,7 @@ nav:
       - CLI リファレンス: core/cli-reference.md
       - .yohaku 設定: core/configuration.md
       - 設計書パイプライン: core/design-docs.md
+      - AI ハーネス連携: core/ai-harness.md
   - context-hub:
       - context-hub/index.md
       - インストール: context-hub/install.md
@@ -93,6 +94,7 @@ nav:
       - ai-project-manager/index.md
       - デプロイ: ai-project-manager/deploy.md
       - 7つの能力: ai-project-manager/capabilities.md
+      - 出力先（通知チャネル）: ai-project-manager/notifications.md
       - 設定GUI: ai-project-manager/gui.md
       - LLM プロバイダ: ai-project-manager/llm-providers.md
   - 戦略:
