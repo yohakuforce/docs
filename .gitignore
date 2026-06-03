@@ -1,0 +1,7 @@
+# MkDocs build output
+site/
+# local build venv
+.venv-build/
+.venv/
+# OS
+.DS_Store

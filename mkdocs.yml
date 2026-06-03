@@ -1,0 +1,105 @@
+site_name: yohakuforce Help
+site_description: 余白フォース Suite（core / context-hub / ai-project-manager）の公式ヘルプ
+site_url: https://yohakuforce.github.io/docs/
+repo_url: https://github.com/yohakuforce/docs
+repo_name: yohakuforce/docs
+copyright: © yohakuforce
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: ダークモードへ
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードへ
+  font:
+    text: Noto Sans JP
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: ja
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+nav:
+  - はじめに:
+      - index.md
+      - 3製品の全体像: getting-started/overview.md
+      - クイックスタート（導入）: getting-started/install.md
+  - core:
+      - core/index.md
+      - インストール / アップデート: core/install.md
+      - CLI リファレンス: core/cli-reference.md
+      - .yohaku 設定: core/configuration.md
+      - 設計書パイプライン: core/design-docs.md
+  - context-hub:
+      - context-hub/index.md
+      - インストール: context-hub/install.md
+      - プロファイル: context-hub/profiles.md
+      - データ取り込み: context-hub/ingest.md
+      - 設定GUI（/admin）: context-hub/admin-gui.md
+      - REST / MCP API: context-hub/api.md
+      - CLI リファレンス: context-hub/cli-reference.md
+  - ai-project-manager:
+      - ai-project-manager/index.md
+      - デプロイ: ai-project-manager/deploy.md
+      - 7つの能力: ai-project-manager/capabilities.md
+      - 設定GUI: ai-project-manager/gui.md
+      - LLM プロバイダ: ai-project-manager/llm-providers.md
+  - 戦略:
+      - strategy/index.md
+      - バージョン管理 / チーム共有: strategy/version-control.md
+      - プロジェクト導入戦略: strategy/adoption.md
+  - リファレンス:
+      - トラブルシューティング: reference/troubleshooting.md
+      - FAQ: reference/faq.md
+      - 用語集: reference/glossary.md
