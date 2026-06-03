@@ -11,7 +11,7 @@
 |---|---|---|---|---|
 | **`claude-code`** | サブスク CLI | `claude -p <prompt> --output-format json`（subprocess） | なし（サブスク範囲） | **既定・推奨** |
 | **`codex`** | サブスク CLI | `codex -q <prompt>`（subprocess） | なし（サブスク範囲） | 代替の CLI |
-| **`antigravity`** | サブスク CLI | `<antigravity> -p <prompt>`（subprocess、フラグ可変） | なし（サブスク範囲） | 社用 PC 既定 |
+| **`antigravity`** | サブスク CLI | `<antigravity> -p <prompt>`（subprocess、フラグ可変） | なし（サブスク範囲） | Antigravity をサブスク利用している場合 |
 | **`local`** | ローカル HTTP | OpenAI 互換 `/v1/chat/completions` | なし（ローカル） | Ollama / LM Studio / vLLM / llama.cpp など |
 | **`ollama`** | ローカル HTTP | Ollama native `/api/generate` | なし（ローカル・完全オフライン） | Ollama 限定で使いたい場合 |
 | **`mock`** | モック | 固定応答（LLM 呼び出しなし） | なし | テスト・CI・決定性検証 |
@@ -84,7 +84,7 @@ CLI が見つからない場合は、PATH に通っているか・上記 `*_CLI_
 ## どれを選ぶか
 
 - **既定で運用** → `claude-code`（サブスク範囲・課金なし）。ホストで CLI が使える環境向け。
-- **社用 PC のデフォルト** → `antigravity`。
+- **Codex / Antigravity を契約している** → `codex` / `antigravity`（いずれもサブスク範囲）。
 - **Docker コンテナ内・オフライン重視** → `local`（`host.docker.internal` 経由）または `ollama`。
 - **テスト / CI / 決定性が欲しい** → `mock`（会議メモからのタスク抽出は走らない＝決定性）。
 
