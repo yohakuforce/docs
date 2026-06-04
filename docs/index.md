@@ -42,6 +42,14 @@
 
 <div class="grid cards" markdown>
 
+-   :material-star-outline:{ .lg .middle } **ベストプラクティスで使いたい**
+
+    ---
+
+    3 製品を推奨構成で導入〜連携〜運用。4 週ロードマップ・1 日の時間割つきの実践プレイブック。
+
+    [:octicons-arrow-right-24: 導入プレイブック](playbook/best-practice.md)
+
 -   :material-rocket-launch-outline:{ .lg .middle } **まず導入したい**
 
     ---

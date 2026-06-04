@@ -75,6 +75,8 @@ nav:
       - index.md
       - 3製品の全体像: getting-started/overview.md
       - クイックスタート（導入）: getting-started/install.md
+  - 導入プレイブック:
+      - ベストプラクティス導入: playbook/best-practice.md
   - core:
       - core/index.md
       - インストール / アップデート: core/install.md
