@@ -11,7 +11,7 @@
 |---|---|---|---|---|
 | **core**（CLI `yohaku`） | Salesforce メタデータ → 設計書を生成 | npm グローバル | PyPI 不要・npm 公開 | なし（単独で動く） |
 | **context-hub**（CLI `context-hub`） | 顧客データを集める文脈基盤（サーバ） | PyPI パッケージ | `pip` / `pipx` | なし |
-| **ai-project-manager** | 進行管理 AI | private リポ + Docker | git clone | **context-hub に依存** |
+| **ai-project-manager** | 進行管理 AI | GitHub 公開リポ + Docker | git clone | **context-hub に依存** |
 
 ---
 

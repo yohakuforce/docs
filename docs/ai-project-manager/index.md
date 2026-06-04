@@ -1,7 +1,7 @@
 # AI-Project-Manager（AIマネージャー）概要
 
 !!! abstract "このページの要約"
-    **AI-Project-Manager（AI-PM）** は、余白フォース / yohakuforce スイートの **進行管理層** です。[Context-Hub](../context-hub/index.md) が集約した会議メモや課題などの「文脈」を読み取り、受託・社内プロジェクトの進行を **7 つの能力（Plan / Assign / Track / Alert / Overview / Standup / WrapUp）** で日次に回します。タスク・日報・アラートといった進行データは AI-PM 自身の **PostgreSQL** に保持し、API はポート **`:8001`**、設定 GUI は `/settings`（localhost 専用）で提供します。**社内運用アプリ（private リポジトリ）** であり、顧客の生データを外部 LLM / SaaS に転記しないデータ境界を守ります。
+    **AI-Project-Manager（AI-PM）** は、余白フォース / yohakuforce スイートの **進行管理層** です。[Context-Hub](../context-hub/index.md) が集約した会議メモや課題などの「文脈」を読み取り、受託・社内プロジェクトの進行を **7 つの能力（Plan / Assign / Track / Alert / Overview / Standup / WrapUp）** で日次に回します。タスク・日報・アラートといった進行データは AI-PM 自身の **PostgreSQL** に保持し、API はポート **`:8001`**、設定 GUI は `/settings`（localhost 専用）で提供します。**オンプレで自社運用するアプリ**であり、顧客の生データを外部 LLM / SaaS に転記しないデータ境界を守ります。
 
 ---
 
@@ -55,7 +55,7 @@ Context-Hub (:8000, REST)  ──→  AI-Project-Manager (:8001)  ──→  Sla
 
 ## データ境界（生データを外部に出さない）
 
-AI-PM は **社内運用アプリ（private）** であり、データの取り扱いに明確な境界を設けています。
+AI-PM は**オンプレで自社運用するアプリ**であり、データの取り扱いに明確な境界を設けています。
 
 - 顧客機密は **Context-Hub の取込先（社内 PC）** に閉じます。
 - 会議メモからの **タスク抽出は Context-Hub 側（社内 PC・on-prem LLM）で取込時に 1 回だけ** 行われ、生トランスクリプトは外部 API に出ません。

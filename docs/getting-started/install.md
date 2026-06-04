@@ -70,7 +70,7 @@ Sources タブで「プロジェクト作成」。詳細は [設定GUI](../conte
 
 ## ③ ai-project-manager のインストール（context-hub の後）
 
-private リポ + Docker。**② の context-hub を起動したまま**進めます。
+GitHub 公開リポ + Docker。**② の context-hub を起動したまま**進めます。
 
 ```powershell
 git clone https://github.com/yohakuforce/ai-project-manager.git

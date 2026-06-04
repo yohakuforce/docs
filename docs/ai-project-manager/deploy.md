@@ -24,8 +24,8 @@
 ## 1. リポジトリを取得して `.env` を作る
 
 ```bash
-git clone <AI-Project-Manager private repo>
-cd AI-Project-Manager
+git clone https://github.com/yohakuforce/ai-project-manager.git
+cd ai-project-manager
 cp .env.example .env   # Windows PowerShell では: copy .env.example .env
 ```
 

@@ -4,7 +4,7 @@
 |---|---|
 | **core** | `@yohakuforce/core`。Salesforce メタデータを知識グラフ化し設計書を生成する CLI（`yohaku`）。 |
 | **context-hub** | 顧客データを取り込み AI に文脈提供するローカル基盤。PyPI `yohakuforce-context-hub`。 |
-| **ai-project-manager（ai-pm）** | context-hub の文脈で進行管理する AI。private + Docker。 |
+| **ai-project-manager（ai-pm）** | context-hub の文脈で進行管理する AI。GitHub 公開リポ + Docker。 |
 | **知識グラフ（graph.sqlite）** | core が Salesforce メタデータから生成する索引。再生成可能なため Git 管理しない。 |
 | **設計書パイプライン** | `yohaku render` で md/html 設計書を生成する流れ。v0.6.0 で詳細設計レベルに到達。 |
 | **contextProvider** | core の `.yohaku/config.json` の設定。共有 context-hub の URL を指すと文脈を参照できる。 |
