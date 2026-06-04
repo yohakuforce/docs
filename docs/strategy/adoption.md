@@ -34,7 +34,7 @@ flowchart LR
 
 「あの案件の Slack のやり取り / Backlog のチケット、どこだっけ？」が増えてきたら context-hub。
 
-- **やること**: 社内の常時起動マシン 1 台に context-hub（`production` プロファイル）を立て、
+- **やること**: 社内の共有マシン 1 台（業務時間中起動で可・専用サーバ不要）に context-hub（`production` プロファイル）を立て、
   Slack/Backlog/Redmine/Gmail を取り込む。チームは Tailscale/VPN で接続。
 - **連結**: core の `.yohaku/config.json` の `contextProvider` を共有 context-hub に向け、
   **設計を「共有された文脈」を踏まえて**行えるようにする。
