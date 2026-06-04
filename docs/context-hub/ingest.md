@@ -77,6 +77,9 @@ CH_INBOX_POLL_SECONDS=60
 # CH_PROJECT_ID=...   # プロジェクトが複数ある場合のみ必要
 ```
 
+!!! note "Windows のパス"
+    Windows では `~/...` の代わりに `C:\Users\<ユーザー>\.context-hub\inbox` のような絶対パス（または `%USERPROFILE%\.context-hub\inbox`）を指定してください。以降のパス例も同様に読み替えます。
+
 ```text
 ~/.context-hub/inbox/
   meeting/

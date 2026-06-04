@@ -23,10 +23,10 @@
 
 ## 1. リポジトリを取得して `.env` を作る
 
-```bash
+```powershell
 git clone https://github.com/yohakuforce/ai-project-manager.git
 cd ai-project-manager
-cp .env.example .env   # Windows PowerShell では: copy .env.example .env
+copy .env.example .env   # Mac/Linux は cp .env.example .env
 ```
 
 `.env` の最低限の設定は次の通りです。

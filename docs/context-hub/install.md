@@ -62,7 +62,7 @@ context-hub init --profile quickstart
 生成された `.env` のパーミッションは `600`（所有者のみ読み書き）に設定されます。
 
 !!! tip "init が DEV_API_KEY を自動発行する"
-    `quickstart` / `personal` プロファイルでは、`init` が **強力なランダム値の `DEV_API_KEY` を生成して `.env` に書き込み、出力にも表示**します。これが [設定GUI（/admin）](admin-gui.md) と REST のデータ呼び出しを認証するキーです。出力の `Admin GUI key (DEV_API_KEY): ...` 行を控えるか、`grep DEV_API_KEY .env` で確認してください。
+    `quickstart` / `personal` プロファイルでは、`init` が **強力なランダム値の `DEV_API_KEY` を生成して `.env` に書き込み、出力にも表示**します。これが [設定GUI（/admin）](admin-gui.md) と REST のデータ呼び出しを認証するキーです。出力の `Admin GUI key (DEV_API_KEY): ...` 行を控えるか、`Select-String DEV_API_KEY .env`（Windows）/ `grep DEV_API_KEY .env`（Mac/Linux）で確認してください。
 
     ```text
     Wrote .env from profile 'quickstart' (permissions: 600).

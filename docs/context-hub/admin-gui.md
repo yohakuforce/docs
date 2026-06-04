@@ -21,11 +21,11 @@ open http://127.0.0.1:8000/admin
 
 | プロファイル | 使うキー | 入手方法 |
 |---|---|---|
-| `quickstart` / `personal`（開発） | `DEV_API_KEY` | `init` の出力に表示／`grep DEV_API_KEY .env` |
+| `quickstart` / `personal`（開発） | `DEV_API_KEY` | `init` の出力に表示／`Select-String DEV_API_KEY .env`（Win）・`grep DEV_API_KEY .env`（Mac） |
 | `production` | ADMIN スコープの consumer キー | 別途発行（`DEV_API_KEY` は無視される。`SECURITY.md` 参照） |
 
 !!! tip "キーが分からないとき"
-    開発プロファイルなら、`init` 出力の `Admin GUI key (DEV_API_KEY): ...` 行を控えるか、作業ディレクトリで `grep DEV_API_KEY .env` を実行してください。インストール手順は [インストール](install.md) を参照。
+    開発プロファイルなら、`init` 出力の `Admin GUI key (DEV_API_KEY): ...` 行を控えるか、作業ディレクトリで `Select-String DEV_API_KEY .env`（Windows）/ `grep DEV_API_KEY .env`（Mac/Linux）を実行してください。インストール手順は [インストール](install.md) を参照。
 
 ## Settings タブ（設定）
 
