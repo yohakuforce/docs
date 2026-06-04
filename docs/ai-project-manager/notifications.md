@@ -31,6 +31,10 @@ Slack の Bot として、整形済みメッセージ（Block Kit）をチャン
 
 === "どう出るか"
 
+    ![Slack での見え方（日報DM / アラートチャネル）](../assets/images/notify-slack.png){ loading=lazy }
+
+    *Slack での見え方（イメージ）。上＝メンバー DM の日報、下＝`#ai-pm-alerts` のアラート。*
+
     - **日報**: メンバーの DM に「📋 本日の日報」ヘッダ + 質問が `Q1. … / Q2. …` と並び、**「回答する」ボタン**（回答フォームURLがある場合）。
     - **アラート**: リーダーのチャネルに重要度の絵文字（🚨 critical / ⚠️ high / ℹ️ medium）+ プロジェクト/重要度/対象メンバー/検出時刻のフィールド + **根拠（evidence）**。
     - **総括・確認ゲート等**: タイトル + 本文 + **「確認する」ボタン**（`action_url` があれば、リーダーが確認操作へ直行）。
@@ -68,6 +72,10 @@ Slack の Bot として、整形済みメッセージ（Block Kit）をチャン
 通知ごとに、指定スプレッドシートへ **1 行ずつ追記**します。シート（タブ）は自動作成されます。
 
 === "どう出るか"
+
+    ![Google Sheets での見え方（alerts タブ）](../assets/images/notify-sheets.png){ loading=lazy }
+
+    *Google スプレッドシートでの見え方（イメージ）。`alerts` タブに 1 通知＝1 行で蓄積され、フィルタ・並べ替え・集計ができます。*
 
     スプレッドシートに 3 つのタブができ、各通知が 1 行として積み上がります。
 
@@ -108,6 +116,10 @@ Slack の Bot として、整形済みメッセージ（Block Kit）をチャン
 各通知を **JSONL（1 行 = 1 通知）** でローカルディレクトリに追記します。外部サービス不要で**必ず動く**ため、フォールバック先でもあります。
 
 === "どう出るか"
+
+    ![local_file での見え方（JSONL）](../assets/images/notify-localfile.png){ loading=lazy }
+
+    *ターミナルでの見え方（イメージ）。`alerts.jsonl` は 1 通知＝1 行の JSONL で、`jq` で整形・絞り込みできます。*
 
     `NOTIFICATION_LOCAL_DIR`（既定 `./.ai-pm/notifications`）に 3 ファイル:
 
